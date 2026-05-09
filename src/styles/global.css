@@ -1,16 +1,49 @@
 @import "tailwindcss";
 
-:root {
-  --web-science-color: #20c997;
+/* Figma design tokens — auto-generated, do not edit theme/theme.css */
+@import "./theme/theme.css";
+
+/*
+  CONFLICT FIX: The Figma export uses --spacing-{px} naming
+  (e.g. --spacing-8: 0.5rem means "8 px worth of space").
+  Tailwind v4 interprets --spacing-{n} as an override for the
+  nth step of the spacing scale, so p-8 became 0.5rem (8 px)
+  instead of 2rem (32 px).  Setting them to `initial` removes
+  the overrides and restores Tailwind's 0.25rem × n default.
+
+  Same issue with --text-lg / --text-sm (Figma pixel values ≠
+  Tailwind's type scale steps).
+*/
+@theme {
+  --spacing-4:  initial;
+  --spacing-6:  initial;
+  --spacing-8:  initial;
+  --spacing-10: initial;
+  --spacing-12: initial;
+  --spacing-14: initial;
+  --spacing-16: initial;
+  --spacing-20: initial;
+  --spacing-24: initial;
+  --spacing-32: initial;
+  --spacing-40: initial;
+  --spacing-48: initial;
+
+  /* Restore Tailwind defaults — Figma exported slightly different rem values */
+  --text-sm: 0.875rem;  /* Figma: 0.88rem */
+  --text-lg: 1.125rem;  /* Figma: 1rem (last duplicate won) */
 }
 
-@theme {
-  --color-brand: #20c997;
-  --color-brand-50: oklch(0.971 0.048 167);
-  --color-brand-100: oklch(0.944 0.095 167);
-  --color-brand-600: oklch(0.65 0.15 168);
-  --color-brand-700: oklch(0.55 0.14 168);
-  --color-brand-900: oklch(0.35 0.1 168);
+:root {
+  --web-science-color: var(--color-primary-500);
+}
+
+@theme inline {
+  --color-brand:     var(--color-primary-500);
+  --color-brand-50:  var(--color-primary-100);
+  --color-brand-100: var(--color-primary-100);
+  --color-brand-600: var(--color-primary-600);
+  --color-brand-700: var(--color-primary-700);
+  --color-brand-900: var(--color-primary-900);
 }
 
 @layer base {
