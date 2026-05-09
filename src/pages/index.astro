@@ -13,7 +13,7 @@ import Icon from '../components/Icon.astro';
     <header class="bg-white border-b border-gray-200">
       <div class="max-w-5xl mx-auto px-6 py-14">
         <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand/10 text-brand text-xs font-semibold uppercase tracking-widest mb-5">
-          <Icon name="sparkles" class="w-3.5 h-3.5" />
+          <Icon name="sparkles" size="sm" />
           Component Library
         </div>
         <h1 class="text-4xl font-bold tracking-tight text-gray-900 mb-3">
@@ -27,6 +27,66 @@ import Icon from '../components/Icon.astro';
 
     <!-- Main content -->
     <main class="max-w-5xl mx-auto px-6 py-14 space-y-16">
+
+      <!-- ── Icon component ──────────────────────────────────────── -->
+      <section class="space-y-6">
+        <div>
+          <p class="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-1">Component</p>
+          <h2 class="text-xl font-bold text-gray-900">Icon</h2>
+        </div>
+
+        <Container title="Sizes & Colors" icon="sparkles">
+          <div class="space-y-5">
+            <!-- Sizes -->
+            <div>
+              <p class="text-xs font-medium text-gray-500 uppercase tracking-wide mb-3">Sizes</p>
+              <div class="flex items-center gap-6 flex-wrap">
+                <div class="flex flex-col items-center gap-1.5">
+                  <Icon name="sparkles" size="sm" class="text-brand" />
+                  <span class="text-xs text-gray-500">sm · 16px</span>
+                </div>
+                <div class="flex flex-col items-center gap-1.5">
+                  <Icon name="sparkles" size="md" class="text-brand" />
+                  <span class="text-xs text-gray-500">md · 20px</span>
+                </div>
+                <div class="flex flex-col items-center gap-1.5">
+                  <Icon name="sparkles" size="lg" class="text-brand" />
+                  <span class="text-xs text-gray-500">lg · 24px</span>
+                </div>
+              </div>
+            </div>
+            <!-- Colors via color prop -->
+            <div>
+              <p class="text-xs font-medium text-gray-500 uppercase tracking-wide mb-3">Colors (via color prop)</p>
+              <div class="flex items-center gap-4 flex-wrap">
+                <Icon name="beaker"         size="lg" color="#20c997" />
+                <Icon name="chart-bar"      size="lg" color="#6366f1" />
+                <Icon name="globe-alt"      size="lg" color="#f59e0b" />
+                <Icon name="code-bracket"   size="lg" color="#ef4444" />
+                <Icon name="cpu-chip"       size="lg" color="#3b82f6" />
+                <Icon name="light-bulb"     size="lg" color="#10b981" />
+              </div>
+            </div>
+            <!-- All icons -->
+            <div>
+              <p class="text-xs font-medium text-gray-500 uppercase tracking-wide mb-3">All icons · md</p>
+              <div class="flex items-center gap-4 flex-wrap text-gray-600">
+                <Icon name="beaker" size="md" />
+                <Icon name="chart-bar" size="md" />
+                <Icon name="globe-alt" size="md" />
+                <Icon name="code-bracket" size="md" />
+                <Icon name="document-text" size="md" />
+                <Icon name="magnifying-glass" size="md" />
+                <Icon name="academic-cap" size="md" />
+                <Icon name="light-bulb" size="md" />
+                <Icon name="sparkles" size="md" />
+                <Icon name="cpu-chip" size="md" />
+                <Icon name="arrow-right" size="md" />
+              </div>
+            </div>
+          </div>
+        </Container>
+      </section>
 
       <!-- ── Container component ───────────────────────────────── -->
       <section class="space-y-6">
@@ -44,14 +104,14 @@ import Icon from '../components/Icon.astro';
             </p>
           </Container>
 
-          <Container title="Data Analytics" icon="chart-bar">
+          <Container title="Data Analytics" icon="chart-bar" iconColor="#6366f1">
             <p class="text-sm text-gray-600 leading-relaxed">
               Visualise research impact through interactive dashboards.
               Compare metrics across datasets and time periods with ease.
             </p>
           </Container>
 
-          <Container title="Code & Tooling" icon="code-bracket" class="md:col-span-2">
+          <Container title="Code & Tooling" icon="code-bracket" iconSize="lg" class="md:col-span-2">
             <p class="text-sm text-gray-600 leading-relaxed">
               Open-source pipelines for crawling, parsing, and indexing web content.
               Built on robust foundations with full TypeScript support and extensible architecture.

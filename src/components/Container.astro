@@ -4,18 +4,23 @@ import Icon from './Icon.astro';
 interface Props {
   title: string;
   icon?: string;
+  iconSize?: 'sm' | 'md' | 'lg';
+  iconColor?: string;
   class?: string;
 }
 
-const { title, icon, class: className } = Astro.props;
+const { title, icon, iconSize = 'md', iconColor, class: className } = Astro.props;
 ---
 
 <div class:list={['rounded-2xl border border-gray-200 bg-white shadow-sm overflow-hidden', className]}>
   <!-- Header -->
   <div class="flex items-center gap-3 px-6 py-4 border-b border-gray-100">
     {icon && (
-      <span class="flex-shrink-0 text-brand">
-        <Icon name={icon} class="w-5 h-5" />
+      <span
+        class:list={['flex-shrink-0', !iconColor && 'text-brand']}
+        style={iconColor ? `color: ${iconColor}` : undefined}
+      >
+        <Icon name={icon} size={iconSize} />
       </span>
     )}
     <h3 class="text-base font-semibold text-gray-900">{title}</h3>

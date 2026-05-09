@@ -1,10 +1,20 @@
 ---
 interface Props {
   name: string;
+  size?: 'sm' | 'md' | 'lg';
+  color?: string;
   class?: string;
 }
 
-const { name, class: className = 'w-5 h-5' } = Astro.props;
+const sizeMap: Record<NonNullable<Props['size']>, string> = {
+  sm: 'w-4 h-4',
+  md: 'w-5 h-5',
+  lg: 'w-6 h-6',
+};
+
+const { name, size = 'md', color, class: className } = Astro.props;
+const sizeClass = sizeMap[size];
+const computedClass = [sizeClass, className].filter(Boolean).join(' ');
 
 // Heroicons v2 outline — 24px viewBox
 const icons: Record<string, string> = {
@@ -35,12 +45,13 @@ const svgInner = icons[name] ?? icons['sparkles'];
 ---
 
 <svg
-  class={className}
+  class={computedClass}
   viewBox="0 0 24 24"
   fill="none"
   stroke="currentColor"
   stroke-width="1.5"
   aria-hidden="true"
+  style={color ? `color: ${color}` : undefined}
 >
   <Fragment set:html={svgInner} />
 </svg>
