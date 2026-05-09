@@ -1,0 +1,200 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Container from '../components/Container.astro';
+import Input from '../components/Input.astro';
+import Tile from '../components/Tile.astro';
+import Icon from '../components/Icon.astro';
+---
+
+<Layout title="Web Science Demo">
+  <div class="min-h-screen bg-gray-50">
+
+    <!-- Page header -->
+    <header class="bg-white border-b border-gray-200">
+      <div class="max-w-5xl mx-auto px-6 py-14">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand/10 text-brand text-xs font-semibold uppercase tracking-widest mb-5">
+          <Icon name="sparkles" class="w-3.5 h-3.5" />
+          Component Library
+        </div>
+        <h1 class="text-4xl font-bold tracking-tight text-gray-900 mb-3">
+          Web Science Demo
+        </h1>
+        <p class="text-lg text-gray-500 max-w-xl leading-relaxed">
+          A minimal Astro + Tailwind 4 project showcasing reusable research UI components.
+        </p>
+      </div>
+    </header>
+
+    <!-- Main content -->
+    <main class="max-w-5xl mx-auto px-6 py-14 space-y-16">
+
+      <!-- ── Container component ───────────────────────────────── -->
+      <section class="space-y-6">
+        <div>
+          <p class="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-1">Component</p>
+          <h2 class="text-xl font-bold text-gray-900">Container</h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+          <Container title="Research Overview" icon="globe-alt">
+            <p class="text-sm text-gray-600 leading-relaxed">
+              Explore web-scale datasets with modern analysis frameworks.
+              Track citations, identify emerging topics, and uncover hidden patterns.
+            </p>
+          </Container>
+
+          <Container title="Data Analytics" icon="chart-bar">
+            <p class="text-sm text-gray-600 leading-relaxed">
+              Visualise research impact through interactive dashboards.
+              Compare metrics across datasets and time periods with ease.
+            </p>
+          </Container>
+
+          <Container title="Code & Tooling" icon="code-bracket" class="md:col-span-2">
+            <p class="text-sm text-gray-600 leading-relaxed">
+              Open-source pipelines for crawling, parsing, and indexing web content.
+              Built on robust foundations with full TypeScript support and extensible architecture.
+            </p>
+          </Container>
+
+        </div>
+      </section>
+
+      <!-- ── Input component ───────────────────────────────────── -->
+      <section class="space-y-6">
+        <div>
+          <p class="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-1">Component</p>
+          <h2 class="text-xl font-bold text-gray-900">Input</h2>
+        </div>
+
+        <div class="max-w-xl">
+          <Container title="New Research Query" icon="magnifying-glass">
+            <form class="space-y-4" onsubmit="return false">
+              <Input
+                label="Research Query"
+                id="query"
+                placeholder="e.g. climate change news coverage 2020–2024"
+                hint="Supports boolean operators: AND, OR, NOT"
+                required
+              />
+              <Input
+                label="Dataset"
+                id="dataset"
+                placeholder="e.g. CommonCrawl, WARC archive…"
+              />
+              <div class="grid grid-cols-2 gap-4">
+                <Input label="Date From" id="date-from" type="date" />
+                <Input label="Date To" id="date-to" type="date" />
+              </div>
+              <Input
+                label="Email Notification"
+                id="email"
+                type="email"
+                placeholder="you@institution.edu"
+                hint="Results will be delivered to this address"
+              />
+              <Input
+                label="API Key (disabled)"
+                id="api-key"
+                placeholder="sk-…"
+                disabled
+                hint="Contact your admin to obtain a key"
+              />
+            </form>
+          </Container>
+        </div>
+      </section>
+
+      <!-- ── Tile component ────────────────────────────────────── -->
+      <section class="space-y-6">
+        <div>
+          <p class="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-1">Component</p>
+          <h2 class="text-xl font-bold text-gray-900">Tile</h2>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+
+          <Tile
+            href="#"
+            image="https://picsum.photos/seed/crawl11/800/450"
+            title="Data Collection"
+            subtitle="Web crawling & scraping"
+            cta="Learn more"
+          >
+            Automated collection of web content at scale using distributed crawling infrastructure
+            with smart deduplication and politeness controls.
+          </Tile>
+
+          <Tile
+            href="#"
+            image="https://picsum.photos/seed/nlp42/800/450"
+            title="NLP Analysis"
+            subtitle="Text & semantics"
+            cta="Explore methods"
+          >
+            Apply state-of-the-art language models to extract entities, topics, and sentiment
+            from large text corpora in multiple languages.
+          </Tile>
+
+          <Tile
+            href="#"
+            image="https://picsum.photos/seed/graph77/800/450"
+            title="Graph Analytics"
+            subtitle="Networks & relationships"
+            cta="See examples"
+          >
+            Map and analyse complex relationships between web resources, authors, citations,
+            and online communities using graph algorithms.
+          </Tile>
+
+          <Tile
+            href="#"
+            image="https://picsum.photos/seed/cpu99/800/450"
+            title="ML Pipelines"
+            subtitle="Training & inference"
+            cta="View architecture"
+          >
+            End-to-end machine learning workflows from raw HTML to fine-tuned models,
+            with versioned artefacts and reproducible experiments.
+          </Tile>
+
+          <Tile
+            href="#"
+            image="https://picsum.photos/seed/cite55/800/450"
+            title="Citation Tracking"
+            subtitle="Academic impact"
+            cta="Open tracker"
+          >
+            Monitor how research findings propagate across the web — news, blogs, social
+            media, and peer-reviewed literature — in real time.
+          </Tile>
+
+          <Tile
+            href="#"
+            image="https://picsum.photos/seed/data88/800/450"
+            title="Open Datasets"
+            subtitle="Free to use"
+            cta="Browse datasets"
+          >
+            Curated, licence-cleared datasets released by the lab for the broader research
+            community, updated quarterly.
+          </Tile>
+
+        </div>
+      </section>
+
+    </main>
+
+    <!-- Page footer -->
+    <footer class="border-t border-gray-200 bg-white mt-16">
+      <div class="max-w-5xl mx-auto px-6 py-8 flex items-center justify-between text-sm text-gray-400">
+        <span>Web Science Demo · Astro + Tailwind 4</span>
+        <span style="color: var(--web-science-color);" class="font-semibold">
+          #20c997
+        </span>
+      </div>
+    </footer>
+
+  </div>
+</Layout>

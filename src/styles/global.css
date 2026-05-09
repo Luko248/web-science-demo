@@ -1,0 +1,20 @@
+@import "tailwindcss";
+
+:root {
+  --web-science-color: #20c997;
+}
+
+@theme {
+  --color-brand: #20c997;
+  --color-brand-50: oklch(0.971 0.048 167);
+  --color-brand-100: oklch(0.944 0.095 167);
+  --color-brand-600: oklch(0.65 0.15 168);
+  --color-brand-700: oklch(0.55 0.14 168);
+  --color-brand-900: oklch(0.35 0.1 168);
+}
+
+@layer base {
+  body {
+    @apply bg-gray-50 text-gray-900 antialiased;
+  }
+}
