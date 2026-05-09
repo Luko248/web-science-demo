@@ -1,6 +1,6 @@
 /*
  * Design tokens exported from Figma
- * Exported at: 2026-05-09T19:36:15.913Z
+ * Exported at: 2026-05-09T20:52:11.667Z
  * Format: Tailwind CSS v4 @theme variables
  * Usage: import this file after @import "tailwindcss";
  */
@@ -15,6 +15,7 @@
   --color-border: oklch(0.928 0.006 264.531);
   --color-border: oklch(0.872 0.009 258.338);
   --color-border-focus: oklch(0.744 0.148 166.363);
+  --color-brand: oklch(0.744 0.148 166.363);
   --color-cta: oklch(0.744 0.148 166.363);
   --color-default: oklch(0.744 0.148 166.363);
   --color-disabled-bg: oklch(0.985 0.002 247.839);
@@ -103,20 +104,15 @@
   --leading-font-line-height-normal: 0.09rem;
   --leading-font-line-height-tight: 0.08rem;
   --leading-font-line-height-title: 0.09rem;
-  --text-base: 1rem;
   --text-body: 0.88rem;
   --text-cta: 0.88rem;
   --text-default: 0.88rem;
   --text-label: 0.88rem;
-  --text-lg: 1.13rem;
   --text-lg: 1rem;
-  --text-sm: 0.88rem;
   --text-sm: 0.88rem;
   --text-subtitle: 0.75rem;
   --text-title: 1rem;
   --text-title: 1rem;
-  --text-xl: 1.25rem;
-  --text-xs: 0.75rem;
   /* Measures */
   --radius-default: 1rem;
   --radius-default: 1rem;
@@ -177,6 +173,11 @@
   --spacing-stroke-weight: 1;
   --spacing-stroke-weight: 1;
   --spacing-stroke-weight: 1;
+  --spacing-text-base: 1rem;
+  --spacing-text-lg: 1.13rem;
+  --spacing-text-sm: 0.88rem;
+  --spacing-text-xl: 1.25rem;
+  --spacing-text-xs: 0.75rem;
   --spacing-x: 0.88rem;
   --spacing-y: 0.63rem;
 }
