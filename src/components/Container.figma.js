@@ -13,12 +13,18 @@ const hasIcon = instance.getEnum('hasIcon', { True: true, False: false })
 // INSTANCE_SWAP: icon — an Icon component instance; read its name via metadata
 // iconSize / iconColor can be set as additional props (see Container.astro)
 let iconName
+let iconSize
+let iconColor
 if (hasIcon) {
   const iconInst = instance.getInstanceSwap('icon')
   if (iconInst && iconInst.type === 'INSTANCE' && iconInst.hasCodeConnect()) {
-    iconName = iconInst.executeTemplate().metadata?.props?.name
+    const iconProps = iconInst.executeTemplate().metadata?.props ?? {}
+    iconName = iconProps.name
+    iconSize = iconProps.size
+    iconColor = iconProps.color
   }
   iconName = iconName ?? 'sparkles'
+  iconSize = iconSize ?? 'md'
 }
 
 export default {
@@ -26,6 +32,8 @@ export default {
     <Container
       title="${title}"
       ${hasIcon && iconName ? figma.tsx`icon="${iconName}"` : ''}
+      ${hasIcon && iconSize && iconSize !== 'md' ? figma.tsx`iconSize="${iconSize}"` : ''}
+      ${hasIcon && iconColor ? figma.tsx`iconColor="${iconColor}"` : ''}
     >
       {/* default slot: main content goes here */}
       <p>Content here</p>

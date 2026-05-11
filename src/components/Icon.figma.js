@@ -11,6 +11,10 @@ const size = instance.getEnum('size', {
   lg: 'lg',
 })
 
+// TEXT: color — optional CSS color value passed to the Icon color prop.
+// Empty means "inherit currentColor" from the parent/class, matching Icon.astro.
+const color = instance.getString('color')
+
 // INSTANCE_SWAP: which vector glyph is shown (vectors/sparkles → name="sparkles", etc.)
 // When connected, propagate the icon name through template metadata for use in parent templates.
 const iconInst = instance.getInstanceSwap('icon')
@@ -20,11 +24,11 @@ if (iconInst && iconInst.type === 'INSTANCE' && iconInst.hasCodeConnect()) {
 }
 
 export default {
-  example: figma.tsx`<Icon name="${name}" size="${size}" />`,
+  example: figma.tsx`<Icon name="${name}" size="${size}" ${color ? figma.tsx`color="${color}"` : ''} />`,
   imports: ['import Icon from "../components/Icon.astro"'],
   id: 'icon',
   metadata: {
     nestable: true,
-    props: { name, size },
+    props: { name, size, color },
   },
 }
