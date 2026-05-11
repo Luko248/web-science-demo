@@ -1,7 +1,21 @@
 @import "tailwindcss";
 
-/* Figma design tokens — re-export from Figma after variable renames */
+/* Figma design tokens — do not edit theme.css directly */
 @import "./theme/theme.css";
+
+@theme {
+  /*
+    1 px base unit: every spacing step equals its number in pixels.
+    p-8 = 8 px  |  gap-16 = 16 px  |  space-y-5 = 5 px
+    Steps explicitly set by theme.css (4, 6, 8 … 48) use Figma's rem
+    values; undefined steps fall back to n × 0.0625rem = n px.
+  */
+  --spacing: 0.0625rem;
+
+  /* Exporter rounds these incorrectly — restore exact Tailwind values */
+  --text-sm: 0.875rem;
+  --text-lg: 1.125rem;
+}
 
 @layer base {
   body {

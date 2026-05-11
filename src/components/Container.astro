@@ -14,7 +14,7 @@ const { title, icon, iconSize = 'md', iconColor, class: className } = Astro.prop
 
 <div class:list={['rounded-2xl border border-gray-200 bg-white shadow-sm overflow-hidden', className]}>
   <!-- Header -->
-  <div class="flex items-center gap-3 px-6 py-4 border-b border-gray-100">
+  <div class="flex items-center gap-12 px-24 py-16 border-b border-gray-100">
     {icon && (
       <span
         class:list={['flex-shrink-0', !iconColor && 'text-brand']}
@@ -27,12 +27,12 @@ const { title, icon, iconSize = 'md', iconColor, class: className } = Astro.prop
   </div>
 
   <!-- Content -->
-  <div class="px-6 py-5">
+  <div class="px-24 py-20">
     <slot />
   </div>
 
   <!-- Footer: flex, align-items stretch, justify-content end, gap 16px -->
-  <div class="px-6 py-4 border-t border-gray-100 flex items-stretch justify-end gap-4">
+  <div class="px-24 py-16 border-t border-gray-100 flex items-stretch justify-end gap-16">
     <slot name="footer" />
   </div>
 </div>

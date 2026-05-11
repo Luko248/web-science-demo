@@ -12,7 +12,7 @@ const { href, image, title, subtitle, cta } = Astro.props;
 
 <a
   href={href}
-  class="group flex flex-col rounded-2xl border border-gray-200 bg-white shadow-sm overflow-hidden no-underline transition-all duration-200 hover:shadow-md hover:border-brand/40 hover:-translate-y-0.5"
+  class="group flex flex-col rounded-2xl border border-gray-200 bg-white shadow-sm overflow-hidden no-underline transition-all duration-200 hover:shadow-md hover:border-brand/40 hover:-translate-y-2"
 >
   {image && (
     <div class="aspect-video overflow-hidden bg-gray-100 flex-shrink-0">
@@ -24,23 +24,23 @@ const { href, image, title, subtitle, cta } = Astro.props;
     </div>
   )}
 
-  <div class="flex flex-col flex-1 p-5 gap-2">
+  <div class="flex flex-col flex-1 p-20 gap-8">
     <h3 class="text-base font-semibold text-gray-900 group-hover:text-brand transition-colors duration-150">
       {title}
     </h3>
     {subtitle && (
       <p class="text-xs font-medium uppercase tracking-wide text-brand/70">{subtitle}</p>
     )}
-    <div class="flex-1 text-sm text-gray-600 leading-relaxed mt-0.5">
+    <div class="flex-1 text-sm text-gray-600 leading-relaxed mt-2">
       <slot />
     </div>
   </div>
 
   {cta && (
-    <div class="px-5 pb-5 pt-0">
-      <span class="inline-flex items-center gap-1.5 text-sm font-semibold text-brand group-hover:gap-2.5 transition-all duration-150">
+    <div class="px-20 pb-20 pt-0">
+      <span class="inline-flex items-center gap-6 text-sm font-semibold text-brand group-hover:gap-10 transition-all duration-150">
         {cta}
-        <svg class="w-4 h-4 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <svg class="w-16 h-16 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
           <path d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
         </svg>
       </span>
