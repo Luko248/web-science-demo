@@ -1,6 +1,6 @@
 /*
  * Design tokens exported from Figma
- * Exported at: 2026-05-09T20:52:11.667Z
+ * Exported at: 2026-05-12T06:50:46.843Z
  * Format: Tailwind CSS v4 @theme variables
  * Usage: import this file after @import "tailwindcss";
  */
@@ -15,9 +15,9 @@
   --color-border: oklch(0.928 0.006 264.531);
   --color-border: oklch(0.872 0.009 258.338);
   --color-border-focus: oklch(0.744 0.148 166.363);
-  --color-brand: oklch(0.744 0.148 166.363);
+  --color-brand: oklch(0.581 0.181 28.697);
   --color-cta: oklch(0.744 0.148 166.363);
-  --color-default: oklch(0.744 0.148 166.363);
+  --color-default: oklch(0.581 0.181 28.697);
   --color-disabled-bg: oklch(0.985 0.002 247.839);
   --color-disabled-text: oklch(0.551 0.023 264.364);
   --color-focus-ring: oklch(0.744 0.148 166.363 / 0.3);
@@ -53,15 +53,6 @@
   --color-primary-text: oklch(1 0 0);
   --color-primary-text-disabled: oklch(0.714 0.019 261.325);
   --color-required-mark: oklch(0.744 0.148 166.363);
-  --color-secondary-100: oklch(0.93 0.033 272.788);
-  --color-secondary-200: oklch(0.87 0.062 274.039);
-  --color-secondary-300: oklch(0.785 0.104 274.713);
-  --color-secondary-400: oklch(0.68 0.158 276.935);
-  --color-secondary-500: oklch(0.585 0.204 277.117);
-  --color-secondary-600: oklch(0.511 0.23 276.966);
-  --color-secondary-700: oklch(0.457 0.215 277.023);
-  --color-secondary-800: oklch(0.398 0.177 277.366);
-  --color-secondary-900: oklch(0.359 0.135 278.697);
   --color-secondary-bg: oklch(1 0 0);
   --color-secondary-bg-active: oklch(0.967 0.003 264.542);
   --color-secondary-bg-disabled: oklch(0.985 0.002 247.839);
@@ -172,6 +163,7 @@
   --spacing-stroke-weight: 1;
   --spacing-stroke-weight: 1;
   --spacing-stroke-weight: 1;
+  --spacing-stroke-weight: 2;
   --spacing-stroke-weight: 1;
   --spacing-text-base: 1rem;
   --spacing-text-lg: 1.13rem;
