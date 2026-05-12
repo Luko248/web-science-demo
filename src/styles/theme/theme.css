@@ -1,6 +1,6 @@
 /*
  * Design tokens exported from Figma
- * Exported at: 2026-05-12T06:50:46.843Z
+ * Exported at: 2026-05-12T06:53:00.926Z
  * Format: Tailwind CSS v4 @theme variables
  * Usage: import this file after @import "tailwindcss";
  */
@@ -15,9 +15,9 @@
   --color-border: oklch(0.928 0.006 264.531);
   --color-border: oklch(0.872 0.009 258.338);
   --color-border-focus: oklch(0.744 0.148 166.363);
-  --color-brand: oklch(0.581 0.181 28.697);
+  --color-brand: oklch(0.744 0.148 166.363);
   --color-cta: oklch(0.744 0.148 166.363);
-  --color-default: oklch(0.581 0.181 28.697);
+  --color-default: oklch(0.744 0.148 166.363);
   --color-disabled-bg: oklch(0.985 0.002 247.839);
   --color-disabled-text: oklch(0.551 0.023 264.364);
   --color-focus-ring: oklch(0.744 0.148 166.363 / 0.3);
