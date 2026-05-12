@@ -1,32 +1,45 @@
 ---
-import Icon from './Icon.astro';
+import Icon from "./Icon.astro";
 
 interface Props {
   title?: string;
   icon?: string;
-  iconSize?: 'sm' | 'md' | 'lg';
+  iconSize?: "sm" | "md" | "lg";
   iconColor?: string;
   class?: string;
 }
 
-const { title, icon, iconSize = 'md', iconColor, class: className } = Astro.props;
+const {
+  title,
+  icon,
+  iconSize = "md",
+  iconColor,
+  class: className,
+} = Astro.props;
 ---
 
-<div class:list={['rounded-2xl border border-gray-200 bg-white shadow-sm overflow-hidden', className]}>
+<div
+  class:list={[
+    "rounded-2xl border border-gray-200 bg-white shadow-sm overflow-hidden",
+    className,
+  ]}
+>
   <!-- Header -->
-  {title && (
-    <div class="flex items-center gap-12 px-24 py-16 border-b border-gray-100">
-      {icon && (
-        <span
-          class:list={['flex-shrink-0', !iconColor && 'text-brand']}
-          style={iconColor ? `color: ${iconColor}` : undefined}
-        >
-          <Icon name={icon} size={iconSize} />
-        </span>
-      )}
-      <h3 class="text-base font-semibold text-gray-900">{title}</h3>
-    </div>
-  )}
+  {
+    title && (
+      <div class="flex items-center gap-12 px-24 py-16 border-b border-gray-100">
+        {icon && (
+          <span
+            class:list={["flex-shrink-0", !iconColor && "text-brand"]}
+            style={iconColor ? `color: ${iconColor}` : undefined}
+          >
+            <Icon name={icon} size={iconSize} />
+          </span>
+        )}
+        <h3 class="text-base font-semibold text-gray-900">{title}</h3>
+      </div>
+    )
+  }
 
   <!-- Content -->
   <div class="px-24 py-20">
@@ -34,7 +47,6 @@ const { title, icon, iconSize = 'md', iconColor, class: className } = Astro.prop
   </div>
 
   <!-- Footer: flex, align-items stretch, justify-content end, gap 16px -->
-  <div class="empty:hidden px-24 py-16 border-t border-gray-100 flex items-stretch justify-end gap-16">
-    <slot name="footer" />
-  </div>
+  <!-- prettier-ignore -->
+  <div class="empty:hidden px-24 py-16 border-t border-gray-100 flex items-stretch justify-end gap-16"><slot name="footer" /></div>
 </div>
