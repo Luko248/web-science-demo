@@ -1,0 +1,58 @@
+/*
+ * Design tokens exported from Figma
+ * Exported at: 2026-05-13T09:22:35.758Z
+ * Format: Raw CSS variables grouped by kind
+ */
+:root {
+  /* Colors */
+  --color-primary-bg-active: oklch(0.508 0.105 165.612);
+  --color-primary-bg-default: oklch(0.744 0.148 166.363);
+  --color-primary-bg-disabled: oklch(0.845 0.13 164.978);
+  --color-primary-bg-focus: oklch(0.744 0.148 166.363);
+  --color-primary-bg-hover: oklch(0.596 0.127 163.225);
+  --color-primary-border-active: oklch(0.508 0.105 165.612);
+  --color-primary-border-default: oklch(0.744 0.148 166.363);
+  --color-primary-border-disabled: oklch(0.845 0.13 164.978);
+  --color-primary-border-focus: oklch(0.744 0.148 166.363);
+  --color-primary-border-hover: oklch(0.596 0.127 163.225);
+  --color-primary-text-active: oklch(1 0 0);
+  --color-primary-text-default: oklch(1 0 0);
+  --color-primary-text-disabled: oklch(1 0 0);
+  --color-primary-text-focus: oklch(1 0 0);
+  --color-primary-text-hover: oklch(1 0 0);
+  --color-secondary-bg-active: oklch(0.967 0.003 264.542);
+  --color-secondary-bg-default: oklch(1 0 0);
+  --color-secondary-bg-disabled: oklch(0.985 0.002 247.839);
+  --color-secondary-bg-focus: oklch(1 0 0);
+  --color-secondary-bg-hover: oklch(0.985 0.002 247.839);
+  --color-secondary-border-active: oklch(0.872 0.009 258.338);
+  --color-secondary-border-default: oklch(0.872 0.009 258.338);
+  --color-secondary-border-disabled: oklch(0.928 0.006 264.531);
+  --color-secondary-border-focus: oklch(0.872 0.009 258.338);
+  --color-secondary-border-hover: oklch(0.872 0.009 258.338);
+  --color-secondary-text-active: oklch(0.373 0.031 259.733);
+  --color-secondary-text-default: oklch(0.373 0.031 259.733);
+  --color-secondary-text-disabled: oklch(0.714 0.019 261.325);
+  --color-secondary-text-focus: oklch(0.373 0.031 259.733);
+  --color-secondary-text-hover: oklch(0.373 0.031 259.733);
+  --effect-focus-ring-color: oklch(0.744 0.148 166.363 / 0.2);
+  /* Fonts */
+  --font-family: Inter;
+  --font-size-lg: 1rem;
+  --font-size-md: 0.88rem;
+  --font-size-sm: 0.75rem;
+  --font-weight: 600;
+  /* Measures */
+  --effect-focus-ring-offset-x: 0rem;
+  --effect-focus-ring-offset-y: 0rem;
+  --effect-focus-ring-radius: 0rem;
+  --effect-focus-ring-spread: 0.13rem;
+  --radius: 0.5rem;
+  --spacing-x-lg: 1rem;
+  --spacing-x-md: 0.88rem;
+  --spacing-x-sm: 0.75rem;
+  --spacing-y-lg: 0.88rem;
+  --spacing-y-md: 0.69rem;
+  --spacing-y-sm: 0.5rem;
+  --stroke-weight: 1;
+}
